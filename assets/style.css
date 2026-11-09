@@ -1,0 +1,65 @@
+:root {
+  --ink: #000;
+  --ink-inverse: #fff;
+  --bg: #fff;
+  --muted: #f3f3f3;
+  --border: #e2e2e2;
+  --text-2: #5e5e5e;
+  --green: #05944f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #fff;
+    --ink-inverse: #000;
+    --bg: #000;
+    --muted: #1c1c1c;
+    --border: #333;
+    --text-2: #a6a6a6;
+    --green: #06c167;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
+header.site {
+  display: flex; align-items: center; gap: 12px;
+  max-width: 720px; margin: 0 auto; padding: 20px 16px 0;
+}
+header.site img { width: 40px; height: 40px; border-radius: 10px; }
+header.site a { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; }
+nav.site { margin-left: auto; display: flex; gap: 16px; font-size: 15px; }
+nav.site a { color: var(--text-2); font-weight: 500; font-size: 15px; }
+nav.site a[aria-current="page"] { color: var(--ink); }
+h1 { font-size: 34px; line-height: 1.15; font-weight: 800; margin: 24px 0 8px; letter-spacing: -0.02em; }
+h2 { font-size: 22px; font-weight: 700; margin: 36px 0 8px; }
+h3 { font-size: 17px; font-weight: 600; margin: 20px 0 4px; }
+p, li { color: var(--ink); }
+.lead { color: var(--text-2); font-size: 19px; margin: 0 0 24px; }
+.meta { color: var(--text-2); font-size: 14px; }
+a { color: var(--ink); text-underline-offset: 3px; }
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+.card {
+  background: var(--muted); border-radius: 16px; padding: 18px 20px; margin: 16px 0;
+}
+.card p { margin: 0; }
+.button {
+  display: inline-block; background: var(--ink); color: var(--ink-inverse);
+  padding: 14px 22px; border-radius: 8px; font-weight: 600; text-decoration: none;
+}
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--green); margin-right: 6px; }
+hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
+footer { max-width: 720px; margin: 0 auto; padding: 0 16px 40px; color: var(--text-2); font-size: 14px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { font-weight: 600; }
+@media (max-width: 480px) {
+  h1 { font-size: 28px; }
+  nav.site { gap: 12px; }
+}
